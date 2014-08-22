@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0C0594C0-4C37-4A9C-8890-57A6E2D0F519}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Mek.CodeGen</RootNamespace>
+    <AssemblyName>Mek.CodeGen</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyMetadata.cs" />
+    <Compile Include="AssemblyMetadataNamespaceContext.cs" />
+    <Compile Include="BaseMetadata.cs" />
+    <Compile Include="BaseTypeIsNotAClassException.cs" />
+    <Compile Include="BaseTypeIsSealedException.cs" />
+    <Compile Include="ClassMetadata.cs" />
+    <Compile Include="DynamicILGenerator.cs" />
+    <Compile Include="DynamicLineGenerator.cs" />
+    <Compile Include="ExpMetadata.cs" />
+    <Compile Include="CodeGen.cs" />
+    <Compile Include="DynamicTypeActivator.cs" />
+    <Compile Include="Expressions\BoolLiteralExp.cs" />
+    <Compile Include="Expressions\ByteLiteralExp.cs" />
+    <Compile Include="Expressions\CharLiteralExp.cs" />
+    <Compile Include="Expressions\DecimalLiteralExp.cs" />
+    <Compile Include="Expressions\DoubleLiteralExp.cs" />
+    <Compile Include="Expressions\EnumLiteralExp.cs" />
+    <Compile Include="Expressions\FloatLiteralExp.cs" />
+    <Compile Include="Expressions\Int32LiteralExp.cs" />
+    <Compile Include="Expressions\LongLiteralExp.cs" />
+    <Compile Include="Expressions\SByteLiteralExp.cs" />
+    <Compile Include="Expressions\ShortLiteralExp.cs" />
+    <Compile Include="Expressions\UIntLiteralExp.cs" />
+    <Compile Include="Expressions\ULongLiteralExp.cs" />
+    <Compile Include="Expressions\UShortLiteralExp.cs" />
+    <Compile Include="Lines\LineMetadata.cs" />
+    <Compile Include="Expressions\LiteralExp.cs" />
+    <Compile Include="DynamicAssemblyGenerator.cs" />
+    <Compile Include="MethodMetadata.cs" />
+    <Compile Include="BlockMetadata.cs" />
+    <Compile Include="Expressions\NullExp.cs" />
+    <Compile Include="Lines\NoopLineMetadata.cs" />
+    <Compile Include="ParameterExp.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Lines\ReturnLineMetadata.cs" />
+    <Compile Include="Expressions\TypeLiteralExp.cs" />
+    <Compile Include="Expressions\StringLiteralExp.cs" />
+    <Compile Include="Lines\SetLocalLineMetadata.cs" />
+    <Compile Include="Lines\SetParameterLineMetadata.cs" />
+    <Compile Include="TypeMetadata.cs" />
+    <Compile Include="LocalExp.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
